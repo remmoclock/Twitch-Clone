@@ -2,6 +2,7 @@ import React from "react"
 import logo from "./assets/IconeTwitch.svg"
 import search from "./assets/Search.svg"
 import menuIco from "./assets/MenuIco.svg"
+import "./HeaderStyle.css"
 
 const Header = () => {
   return (
