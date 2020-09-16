@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import "./GamesStyle.css"
 import api from "../api"
 
 const Games = () => {
