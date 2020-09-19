@@ -68,11 +68,26 @@ const Sidebar = () => {
     fetchData()
   }, [])
 
-
   return (
     <div className="sidebar">
       <h2 className="titreSidebar">Chaînes recommandées</h2>
-      <ul className="listStream"></ul>
+      <ul className="listStream">
+        {topStreams.map((stream, index) => (
+          <li key={index} className="containerFlexSidebar">
+            <img
+              src={stream.truePic}
+              alt="logo user"
+              className="profilePicRonde"
+            />
+            <div className="streamUser">{stream.user_name}</div>
+            <div className="viewerRight">
+              <div className="pointRouge"></div>
+              <div>{stream.viewer_count}</div>
+            </div>
+            <div className="gameNameSidebar">{stream.gameName}</div>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
