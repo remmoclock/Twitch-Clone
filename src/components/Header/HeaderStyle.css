@@ -7,6 +7,7 @@
 }
 
 .listeMenu {
+  list-style-type: none;
   height: 50px;
   display: flex;
   align-items: center;
@@ -50,6 +51,17 @@
     border-bottom-right-radius: 5px;
     padding: 4px 20px;
     border: none;
+}
+
+.lien {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.lien:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Responsive */
