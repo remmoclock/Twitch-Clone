@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import "./TopStreamsStyle.css"
 import api from "../api"
 
 const TopStreams = () => {
@@ -84,7 +85,7 @@ const TopStreams = () => {
               <p className="textStream viewers">
                 Viewers : {channel.viewer_count}
               </p>
-              <div className="btnCarte">Regrder {channel.user_name}</div>
+              <div className="btnCarte">Regarder {channel.user_name}</div>
             </div>
           </div>
         ))}
