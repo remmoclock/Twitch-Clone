@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import "./TopStreamsStyle.css"
+import { Link } from "react-router-dom"
 import api from "../api"
 
 const TopStreams = () => {
@@ -85,7 +86,11 @@ const TopStreams = () => {
               <p className="textStream viewers">
                 Viewers : {channel.viewer_count}
               </p>
+              <Link className='lien' to={{
+                pathname: `/live/${channel.login}`
+              }} >
               <div className="btnCarte">Regarder {channel.user_name}</div>
+              </Link>
             </div>
           </div>
         ))}
