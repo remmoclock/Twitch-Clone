@@ -78,7 +78,7 @@ const Header = () => {
                 <Link
                   className="lien"
                   to={{
-                    pathname: `/resultats/${searchInput}`,
+                    pathname: `/resultats/${searchInput}`
                   }}
                 >
                   <button type="submit">
