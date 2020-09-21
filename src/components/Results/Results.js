@@ -29,6 +29,7 @@ const Results = () => {
     <div>
       <div className="containerDecaleResultats">
         <h4>Résultats de recherche:</h4>
+
         {streamerInfo.map((stream, index) => (
           <div key={index} className="carteResultats">
             <img
@@ -39,17 +40,17 @@ const Results = () => {
             <div className="cardBodyResults">
               <h5 className="titreCartesStream"> {stream.display_name} </h5>
               <div className="txtResult"> {stream.description} </div>
+              <Link
+                className="lien"
+                to={{
+                  pathname: `/live/${stream.login}`,
+                }}
+              >
+                <div className="btnCarte btnResult">
+                  Regarder {stream.display_name}
+                </div>
+              </Link>
             </div>
-            <Link
-              className="lien"
-              to={{
-                pathname: `/live/${stream.login}`,
-              }}
-            >
-              <div className="btnCarte btnResult">
-                Regarder {stream.display_name}
-              </div>
-            </Link>
           </div>
         ))}
       </div>

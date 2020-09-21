@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import api from "../api"
 import "./SidebarStyle.css"
+import { Link } from "react-router-dom"
 
 const Sidebar = () => {
   const [topStreams, setTopStreams] = useState([])
@@ -73,19 +74,27 @@ const Sidebar = () => {
       <h2 className="titreSidebar">Chaînes recommandées</h2>
       <ul className="listStream">
         {topStreams.map((stream, index) => (
-          <li key={index} className="containerFlexSidebar">
-            <img
-              src={stream.truePic}
-              alt="logo user"
-              className="profilePicRonde"
-            />
-            <div className="streamUser">{stream.user_name}</div>
-            <div className="viewerRight">
-              <div className="pointRouge"></div>
-              <div>{stream.viewer_count}</div>
-            </div>
-            <div className="gameNameSidebar">{stream.gameName}</div>
-          </li>
+          <Link
+            className="lien"
+            key={index}
+            to={{
+              pathname: `/live/${stream.login}`,
+            }}
+          >
+            <li key={index} className="containerFlexSidebar">
+              <img
+                src={stream.truePic}
+                alt="logo user"
+                className="profilePicRonde"
+              />
+              <div className="streamUser">{stream.user_name}</div>
+              <div className="viewerRight">
+                <div className="pointRouge"></div>
+                <div>{stream.viewer_count}</div>
+              </div>
+              <div className="gameNameSidebar">{stream.gameName}</div>
+            </li>
+          </Link>
         ))}
       </ul>
     </div>
