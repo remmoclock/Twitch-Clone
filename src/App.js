@@ -8,6 +8,7 @@ import Live from "./components/Live/Live"
 import Results from "./components/Results/Results"
 import TopStreams from "./components/TopStreams/TopStreams"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import Erreur from "./components/Erreur/Erreur"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/resultats/:slug" component={Results} />
           <Route exact path="/live/:slug" component={Live} />
           <Route exact path="/game/:slug" component={GameStream} />
+          <Route exact path="/resultats" component={Erreur} />
         </Switch>
       </div>
     </Router>

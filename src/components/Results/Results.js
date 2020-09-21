@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import "./ResultsStyle.css"
 import api from "../api"
 import { Link, useParams } from "react-router-dom"
+import Erreur from "../Erreur/Erreur"
 
 const Results = () => {
   let { slug } = useParams()
@@ -15,13 +16,16 @@ const Results = () => {
         `https://api.twitch.tv/helix/users?login=${slug}`
       )
       //   console.log(result)
-
-      setStreamerInfo(result.data.data)
+      if (result.data.data.length === 0) {
+        setResult(false)
+      } else {
+        setStreamerInfo(result.data.data)
+      }
     }
     fetchData()
   }, [slug])
 
-  return (
+  return result ? (
     <div>
       <div className="containerDecaleResultats">
         <h4>Résultats de recherche:</h4>
@@ -50,6 +54,8 @@ const Results = () => {
         ))}
       </div>
     </div>
+  ) : (
+    <Erreur />
   )
 }
 
