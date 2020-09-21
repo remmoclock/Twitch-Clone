@@ -72,7 +72,7 @@ const GameStream = () => {
   return (
     <div>
       <h1 className="titreGamesStreams">Streams: {slug}</h1>
-      <h3 className="sousTitreGameStream">
+      <h3 className="sousTitreGameStreams">
         <strong className="textColored">{viewers}</strong> personnes regardent{" "}
         {slug}
       </h3>
