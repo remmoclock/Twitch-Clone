@@ -38,7 +38,7 @@ const Live = () => {
     }
 
     fetchData()
-  }, [])
+  }, [slug])
 
   return (
     <div className="containerDecale">

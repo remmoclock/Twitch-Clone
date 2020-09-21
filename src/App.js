@@ -1,6 +1,7 @@
 import React from "react"
 import "./App.css"
 import Games from "./components/Games/Games"
+import GameStream from "./components/GameStream/GameStream"
 import Header from "./components/Header/Header"
 import Sidebar from "./components/Sidebar/Sidebar"
 import Live from "./components/Live/Live"
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/" component={Games} />
           <Route exact path="/top-streams" component={TopStreams} />
           <Route exact path="/live/:slug" component={Live} />
+          <Route exact path="/game/:slug" component={GameStream} />
         </Switch>
       </div>
     </Router>
