@@ -48,24 +48,28 @@ const Header = () => {
 
   return (
     <div>
+      
       <nav className="headerTop">
         {(menu || !smallScreen) && (
+
+
           <ul className="listeMenu">
+
             <li onClick={hideMenu} className="liensNav">
               <Link className="lien" to="/">
                 <img src={logo} alt="logo twitch" className="logo" />
               </Link>
             </li>
+              <li onClick={hideMenu} className="liensNav">
             <Link className="lien" to="/">
-              <li onClick={hideMenu} className="liensNav">
                 Top Games
-              </li>
             </Link>
-            <Link className="lien" to="/top-streams">
+              </li>
               <li onClick={hideMenu} className="liensNav">
+            <Link className="lien" to="/top-streams">
                 Top Streams
-              </li>
             </Link>
+              </li>
             <li className="liensNav">
               <form className="formSubmit" onSubmit={handleSubmit}>
                 <input
