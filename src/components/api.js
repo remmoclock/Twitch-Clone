@@ -1,19 +1,17 @@
-import axios from "axios"
+import axios from "axios";
 
 let api = axios.create({
   headers: {
-    "Client-ID": "o6qbhh9eliz9tmeqf1ibdqfmgpss86",
-    Authorization: "Bearer rk5pado0fi4a1rcp9wr9sxtvuodmma", // netlify
+    "Client-ID": "cmmxib74oxgkshq02lekbgq1lpsnx8",
+    "Authorization": "Bearer vqgkdwyj04yrlhvtptan6w5iu6mxvt",
   },
-})
-
+});
 
 // REDIRECT = "http://localhost:3000/"
 // REDIRECT = "https://127.0.0.1:3000/
 // REDIRECT = "https://remmo-twitch.netlify.app/"
- 
 
-//  LIEN AUTH = https://id.twitch.tv/oauth2/authorize?client_id=o6qbhh9eliz9tmeqf1ibdqfmgpss86&redirect_uri=https://remmo-twitch.netlify.app/&response_type=token
-//  LIEN AUTH = https://id.twitch.tv/oauth2/authorize?client_id=o6qbhh9eliz9tmeqf1ibdqfmgpss86&redirect_uri=http://127.0.0.1/&response_type=token
+// Ouvrir en navigation obtenir le ID a ajouter au lien suivant pour avoir le bearer auth
+//  LIEN AUTH = https://id.twitch.tv/oauth2/authorize?client_id=cmmxib74oxgkshq02lekbgq1lpsnx8&redirect_uri=https://127.0.0.1:3000/&response_type=token
 
-export default api
+export default api;
