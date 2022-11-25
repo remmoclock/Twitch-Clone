@@ -9,6 +9,8 @@ let api = axios.create({
 
 // 64lv5wcxd955625qv1ttksa0w8vlli
 
+// RAJOUTER LES ENVS VARIABLES DANS NETLIFY
+
 // REDIRECT = "http://localhost:3000/"
 // REDIRECT = "https://127.0.0.1:3000/
 // REDIRECT = "https://remmo-twitch.netlify.app/"
