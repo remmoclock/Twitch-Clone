@@ -1,14 +1,14 @@
-import React from "react"
-import "./App.css"
-import Games from "./components/Games/Games"
-import GameStream from "./components/GameStream/GameStream"
-import Header from "./components/Header/Header"
-import Sidebar from "./components/Sidebar/Sidebar"
-import Live from "./components/Live/Live"
-import Results from "./components/Results/Results"
-import TopStreams from "./components/TopStreams/TopStreams"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
-import Erreur from "./components/Erreur/Erreur"
+import React from "react";
+import "./App.css";
+import Games from "./components/Games/Games";
+import GameStream from "./components/GameStream/GameStream";
+import Header from "./components/Header/Header";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Live from "./components/Live/Live";
+import Results from "./components/Results/Results";
+import TopStreams from "./components/TopStreams/TopStreams";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Erreur from "./components/Erreur/Erreur";
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
         </Switch>
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

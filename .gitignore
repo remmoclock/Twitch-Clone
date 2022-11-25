@@ -2,7 +2,7 @@
 
 # api
 # src/components/api.js
-
+.env
 # dependencies
 /node_modules
 /.pnp
